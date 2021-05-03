@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An animated planetary style social media menu">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="favicon.png" type="image/png" rel="shortcut icon">
+    <link href="style.css" rel="stylesheet">
+    <title>Planetary social menu • SharpWidget</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="animations">
+      <div id="center" class="animation-selector">
+        <div class="animation-checkbox checked"></div>
+        <span class="animation-name">Center animation</span>
+      </div>
+      <div id="delay" class="animation-selector">
+        <div class="animation-checkbox"></div>
+        <span class="animation-name">Delay animation</span>
+      </div>
+      <div id="rotate" class="animation-selector">
+        <div class="animation-checkbox"></div>
+        <span class="animation-name">Rotat animation</span>
+      </div>
+    </div>
+    <div class="menu" data-animation='center'>
+      <div class="toggle">
+        <i class="toggle-icon bx bxs-share-alt"></i>
+      </div>
+      <ul class="social-links">
+        <li class="social-link-wrapper social-1">
+          <a title="Facebook" class="social-link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <i class="social-icon bx bxl-facebook"></i>
+          </a>
+        </li>
+        <li class="social-link-wrapper social-2">
+          <a title="Instagram" class="social-link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <i class="social-icon bx bxl-instagram"></i>
+          </a>
+        </li>
+        <li class="social-link-wrapper social-3">
+          <a title="Twitter" class="social-link" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <i class="social-icon bx bxl-twitter"></i>
+          </a>
+        </li>
+        <li class="social-link-wrapper social-4">
+          <a title="Linkedin" class="social-link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i class="social-icon bx bxl-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-link-wrapper social-5">
+          <a title="Youtube" class="social-link" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <i class="social-icon bx bxl-youtube"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

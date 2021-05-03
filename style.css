@@ -1,0 +1,305 @@
+:root {
+  /* Design colors */
+  --primary: #1CCAC0;
+  --light: #F6F6F6;
+  --dark: #212121;
+  --gray: #cfcfcf;
+
+  /* Social media brands colors */
+  --facebook: #4267B2;
+  --instagram: #E1306C;
+  --twitter: #1DA1F2;
+  --linkedin: #0077B5;
+  --youtube: #E62117;
+
+  /* Global properties variables */
+  --social-link-size: 44px;
+  --half-social-link: calc(var(--social-link-size) / 2);
+  --spacing: 30px;
+  --delay-animation-delay: 40ms;
+  --rotate-animation-delay: 10ms;
+  --transition: 300ms;
+  --animation-transition: 500ms;
+}
+
+/* -------------------------------------------------------------------------- */
+
+html {
+  font-style: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--dark);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.animations {
+  margin-bottom: 150px;
+}
+
+.animation-selector {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  letter-spacing: .1rem;
+}
+
+.animation-checkbox {
+  height: 15px;
+  width: 15px;
+  margin-right: 15px;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  transition: background-color var(--transition);
+}
+
+.animation-checkbox.checked {
+  background-color: var(--primary);
+}
+
+.animation-checkbox.checked ~ .animation-name {
+  color: var(--primary);
+}
+
+.animation-name {
+  color: var(--light);
+  line-height: 40px;
+  user-select: none;
+  transition: color var(--transition);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  height: 60px;
+  width: 60px;
+  border: 1px solid var(--gray);
+  border-radius: 50%;
+  background-color: var(--light);
+  cursor: pointer;
+  transition: background-color var(--animation-transition);
+}
+
+.menu-open .toggle {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.toggle-icon {
+  color: var(--primary);
+  font-size: 2rem;
+  transition: transform var(--animation-transition);
+}
+
+.menu-open .toggle-icon {
+  font-size: 2.6rem;
+  color: var(--light);
+  transform: rotate(180deg);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.menu[data-animation='rotate'] .social-links {
+  transform: rotate(-135deg);
+  transition: transform var(--animation-transition);
+}
+
+.menu[data-animation='rotate'].menu-open .social-links {
+  transform: rotate(0);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.social-link-wrapper {
+  position: absolute;
+  height: var(--social-link-size);
+  width: var(--social-link-size);
+  list-style: none;
+  transition: all var(--animation-transition);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: var(--light);
+  text-decoration: none;
+  transition: background-color var(--transition);
+}
+
+.social-icon {
+  font-size: 1.4rem;
+  transition: color var(--transition);
+}
+
+.social-link:hover .social-icon {
+  color: var(--light);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.social-1 {
+  right: calc(50% - var(--half-social-link));
+}
+
+.social-1 .social-link:hover {
+  background-color: var(--facebook);
+}
+
+.social-1 .social-icon {
+  color: var(--facebook);
+}
+
+.menu-open .social-1 {
+  right: calc(100% + var(--spacing));
+}
+
+/* -------------------------------------------------------------------------- */
+
+.social-2 {
+  bottom: calc(50% - var(--half-social-link));
+  right: calc(50% - var(--half-social-link));
+}
+
+.social-2 .social-link:hover {
+  background-color: var(--instagram);
+}
+
+.social-2 .social-icon {
+  color: var(--instagram);
+}
+
+.menu[data-animation='delay'] .social-2 {
+  transition-delay: var(--delay-animation-delay);
+}
+
+.menu[data-animation='rotate'] .social-2 {
+  transition-delay: var(--rotate-animation-delay);
+}
+
+.menu-open .social-2 {
+  bottom: calc(100% + var(--spacing) - var(--half-social-link));
+  right: calc(100% + var(--spacing) - var(--half-social-link));
+}
+
+/* -------------------------------------------------------------------------- */
+
+.social-3 {
+  bottom: calc(50% - var(--half-social-link));
+}
+
+.social-3 .social-link:hover {
+  background-color: var(--twitter);
+}
+
+.social-3 .social-icon {
+  color: var(--twitter);
+}
+
+.menu[data-animation='delay'] .social-3 {
+  transition-delay: calc(var(--delay-animation-delay) * 2);
+}
+
+.menu[data-animation='rotate'] .social-3 {
+  transition-delay: calc(var(--rotate-animation-delay) * 2);
+}
+
+.menu-open .social-3 {
+  bottom: calc(100% + var(--spacing));
+}
+
+/* -------------------------------------------------------------------------- */
+
+.social-4 {
+  bottom: calc(50% - var(--half-social-link));
+  left: calc(50% - var(--half-social-link));
+}
+
+.social-4 .social-link:hover {
+  background-color: var(--linkedin);
+}
+
+.social-4 .social-icon {
+  color: var(--linkedin);
+}
+
+.menu[data-animation='delay'] .social-4 {
+  transition-delay: calc(var(--delay-animation-delay) * 3);
+}
+
+.menu[data-animation='rotate'] .social-4 {
+  transition-delay: calc(var(--rotate-animation-delay) * 3);
+}
+
+.menu-open .social-4 {
+  bottom: calc(100% + var(--spacing) - var(--half-social-link));
+  left: calc(100% + var(--spacing) - var(--half-social-link));
+}
+
+/* -------------------------------------------------------------------------- */
+
+.social-5 {
+  bottom: calc(50% - var(--half-social-link));
+  left: calc(50% - var(--half-social-link));
+}
+
+.social-5 .social-link:hover {
+  background-color: var(--youtube);
+}
+
+.social-5 .social-icon {
+  color: var(--youtube);
+}
+
+.menu[data-animation='delay'] .social-5 {
+  transition-delay: calc(var(--delay-animation-delay) * 4);
+}
+
+.menu[data-animation='rotate'] .social-5 {
+  transition-delay: calc(var(--rotate-animation-delay) * 4);
+}
+
+.menu-open .social-5 {
+  left: calc(100% + var(--spacing));
+}

@@ -13,4 +13,4 @@ by [Mounir Hanafi](https://mounirhanafi.com).
 * ### Twitter : [@SharpWidget](https://twitter.com/SharpWidget)
 
 # Licence
-[MIT](https://github.com/sharpwidget/planetary-social-menu/tree/main/LICENSE.md) Copyright (c) 2021 [Mounir Hanafi](https://mounirhanafi.com)
+[MIT](https://github.com/sharpwidget/01.planetary-social-menu/tree/main/LICENSE.md) Copyright (c) 2021 [Mounir Hanafi](https://mounirhanafi.com)
